@@ -1,0 +1,10 @@
+
+cd backend
+python agent_graphs.py
+
+cd backend
+celery -A agent_graphs.celery_app worker --loglevel=info -P solo  #for window only run this command
+
+
+cd frontend
+npm run dev

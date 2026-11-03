@@ -1,0 +1,28 @@
+# Python / Virtual Environment
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Environment Variables & Secrets
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Node.js & Next.js Build Files
+node_modules/
+.next/
+out/
+build/
+dist/
+.tsbuildinfo
+
+# Project Specific Data
+downloaded_files/
+
+# OS / Editor Specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
