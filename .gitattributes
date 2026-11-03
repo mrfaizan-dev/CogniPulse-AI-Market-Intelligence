@@ -1,0 +1,9 @@
+# Pure frontend folder ko language stats se hide karne ke liye
+frontend/**/* linguist-vendored
+
+# Safety override ke liye
+*.ts linguist-vendored
+*.tsx linguist-vendored
+*.js linguist-vendored
+*.jsx linguist-vendored
+*.css linguist-vendored
