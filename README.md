@@ -1,326 +1,850 @@
-<p align="center">
-  <img src="assets/cognipulse-banner.svg" alt="CogniPulse — AI Market Intelligence" width="100%">
-</p>
+<div align="center">
 
-<p align="center"><b>From a research query to structured market intelligence.</b></p>
+# CogniPulse
 
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python_3.12-0b1220?style=flat-square&logo=python&logoColor=22d3ee">
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-0b1220?style=flat-square&logo=fastapi&logoColor=2dd4bf">
-  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-0b1220?style=flat-square&logoColor=a78bfa">
-  <img alt="OpenRouter" src="https://img.shields.io/badge/OpenRouter-0b1220?style=flat-square&logoColor=a78bfa">
-  <img alt="Playwright" src="https://img.shields.io/badge/Playwright-0b1220?style=flat-square&logo=playwright&logoColor=2dd4bf">
-  <img alt="Celery" src="https://img.shields.io/badge/Celery-0b1220?style=flat-square&logo=celery&logoColor=22d3ee">
-  <img alt="Redis" src="https://img.shields.io/badge/Redis-0b1220?style=flat-square&logo=redis&logoColor=f59e0b">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js_15-0b1220?style=flat-square&logo=nextdotjs&logoColor=white">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0b1220?style=flat-square&logo=typescript&logoColor=38bdf8">
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-0b1220?style=flat-square&logo=docker&logoColor=38bdf8">
-</p>
+### Autonomous AI Market Intelligence.<br/>From Research Queries to Structured Insights.
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3200&pause=1100&color=22D3EE&center=true&vCenter=true&width=760&height=40&lines=Natural-language+query+%E2%86%92+structured+intelligence+report;Agentic+workflow+orchestrated+with+LangGraph;Browser-based+retrieval+with+layered+fallbacks;Schema-validated+LLM+extraction+with+Pydantic;Async+execution+with+Celery+and+Redis" alt="CogniPulse animated feature summary" />
+
+<br/>
+
+**CogniPulse** is a full-stack, agentic AI platform that turns a plain-English market research question into a structured Markdown intelligence report. It discovers public web sources, retrieves their content with browser automation, extracts validated structured data with an LLM, and presents the result in a live dashboard.
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.12-2563EB?style=flat-square&logo=python&logoColor=white&labelColor=0B1220)
+![FastAPI](https://img.shields.io/badge/FastAPI-REST_API-0891B2?style=flat-square&logo=fastapi&logoColor=white&labelColor=0B1220)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agent_Workflow-7C3AED?style=flat-square&labelColor=0B1220)
+![Pydantic](https://img.shields.io/badge/Pydantic-v2-2563EB?style=flat-square&logo=pydantic&logoColor=white&labelColor=0B1220)
+![Celery](https://img.shields.io/badge/Celery-Background_Tasks-059669?style=flat-square&logo=celery&logoColor=white&labelColor=0B1220)
+![Redis](https://img.shields.io/badge/Redis-Broker_%26_Backend-DC2626?style=flat-square&logo=redis&logoColor=white&labelColor=0B1220)
+![Playwright](https://img.shields.io/badge/Playwright-Browser_Automation-059669?style=flat-square&logo=playwright&logoColor=white&labelColor=0B1220)
+![Next.js](https://img.shields.io/badge/Next.js-15-F8FAFC?style=flat-square&logo=nextdotjs&logoColor=white&labelColor=0B1220)
+![React](https://img.shields.io/badge/React-19-0891B2?style=flat-square&logo=react&logoColor=white&labelColor=0B1220)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-2563EB?style=flat-square&logo=typescript&logoColor=white&labelColor=0B1220)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Styling-0891B2?style=flat-square&logo=tailwindcss&logoColor=white&labelColor=0B1220)
+![Docker](https://img.shields.io/badge/Docker-Compose-2563EB?style=flat-square&logo=docker&logoColor=white&labelColor=0B1220)
+
+<br/>
+
+[Overview](#executive-overview) · [Problem & Solution](#the-problem) · [Features](#key-features) · [Architecture](#system-architecture) · [Agent Workflow](#ai-agent-workflow) · [Scraping](#web-scraping-engineering)
+
+[AI Extraction](#structured-ai-extraction) · [Async Processing](#asynchronous-background-processing) · [Tech Stack](#technology-stack) · [API](#api-documentation) · [Quick Start](#installation-and-quick-start)
+
+[Engineering Challenges](#engineering-challenges-and-solutions) · [Skills](#technical-skills-demonstrated) · [Limitations](#limitations-and-production-considerations) · [Roadmap](#future-roadmap) · [Security](#security-and-responsible-usage)
+
+</div>
 
 ---
 
-## Overview
+## Executive Overview
 
-**CogniPulse** is an AI-powered market research and competitor intelligence platform. A user submits a research query in a web dashboard. The backend then:
+Market and competitor research is slow, repetitive and hard to standardize. Analysts search for sources, open page after page, wrestle with JavaScript-heavy websites, copy details into notes and then try to write something coherent.
 
-1. Discovers relevant sources with **Tavily**.
-2. Retrieves page content with **layered browser automation**.
-3. Cleans the HTML and sends the text to an **OpenRouter-hosted LLM**.
-4. Validates the extracted data with **Pydantic** schemas.
-5. Compiles the findings into a **Markdown intelligence report**.
+**CogniPulse automates that entire loop.** A user submits a natural-language query such as *"Compare leading project management software competitors"*. The system then:
 
-The pipeline is orchestrated by **LangGraph** and runs asynchronously on **Celery + Redis**, so long research jobs never block an HTTP request.
+1. **Discovers** relevant public web sources with the Tavily Search API.
+2. **Retrieves** each page through a layered browser-automation engine with fallbacks.
+3. **Cleans** raw HTML into readable text.
+4. **Extracts** structured intelligence (titles, pricing, availability, key specifications, summaries) with an LLM, validated by Pydantic schemas.
+5. **Compiles** the findings into a consolidated Markdown executive intelligence report.
+6. **Delivers** the report to an interactive dashboard that tracks the background task live.
 
-> An independently developed portfolio project demonstrating backend engineering, agentic AI workflows, web automation, LLM integration, asynchronous processing, and full-stack development.
+> [!NOTE]
+> **In 20 seconds:** CogniPulse is an agentic research pipeline. Type a research question, get a structured market intelligence report. The work runs asynchronously in a Celery worker, orchestrated as a stateful LangGraph workflow.
+
+### At a Glance
+
+| | |
+|---|---|
+| **Input** | A natural-language market research or competitor-analysis query |
+| **Output** | A structured Markdown executive intelligence report (exportable as Markdown or JSON) |
+| **Agent workflow** | 3 LangGraph nodes: Searcher, Scraper, Finalizer, with conditional error routing |
+| **Source discovery** | Tavily advanced search, up to 5 candidate URLs per configured request |
+| **Retrieval strategy** | 3 layers: primary retrieval, SP2 fallback, SP3 (Nodriver) fallback |
+| **LLM concurrency** | Parsing limited to 3 concurrent operations through an asyncio semaphore |
+| **Execution model** | FastAPI accepts the job (HTTP 202); Celery + Redis run it in the background |
+| **Infrastructure** | Docker Compose with 4 services: Redis, backend, Celery worker, frontend |
+
+**Example research queries**
+
+- Analyze AI automation market trends.
+- Compare leading project management software competitors.
+- Analyze electric vehicle market pricing.
+- Research luxury villa communities and prices in the UAE.
+- Extract product features, prices, specifications and availability from relevant websites.
+
+---
+
+## The Problem
+
+Manual online market research breaks down in predictable ways:
+
+| Pain Point | What Actually Happens |
+|---|---|
+| **Manual source discovery** | Finding credible, relevant pages means running many searches and filtering noise by hand. |
+| **Time-consuming competitor research** | Each competitor or product requires opening, reading and comparing multiple pages. |
+| **Dynamic website content** | Many modern sites render content with JavaScript, so a simple HTTP request returns an empty shell. |
+| **Unstructured information** | Prices, features and availability are scattered across inconsistent page layouts. |
+| **Manual extraction** | Copying details into notes or spreadsheets is slow and error-prone. |
+| **Inconsistent research reports** | Two analysts researching the same market produce differently structured outputs. |
+
+## The Solution
+
+CogniPulse replaces the manual loop with an automated, repeatable pipeline.
+
+| Step | Manual Workflow | CogniPulse Workflow |
+|---|---|---|
+| **Find sources** | Search engines, tabs, bookmarks | Tavily advanced search, automatic URL selection and domain filtering |
+| **Read pages** | Open each page, wait for scripts, scroll | Browser automation with dynamic rendering and fallback retrieval |
+| **Clean content** | Ignore navigation, ads and clutter mentally | BeautifulSoup cleaning and html2text conversion |
+| **Extract facts** | Copy prices, specs and availability by hand | LLM extraction validated against Pydantic schemas |
+| **Consolidate** | Write a summary in a document | Automatic Markdown executive report |
+| **Track progress** | Unknown until finished | Task ID, status polling, elapsed time and activity history in the dashboard |
+
+---
 
 ## Key Features
 
-- **Stateful agent workflow:** a LangGraph `StateGraph` with `searcher`, `scraper` and `finalizer` nodes, plus conditional routing that stops the run on error.
-- **Layered retrieval:** SeleniumBase + Playwright first, then a Playwright fallback, then an isolated Nodriver process.
-- **Structured LLM extraction:** Pydantic v2 schemas, strict "use only the supplied page content" instructions, API-key rotation and rate-limit retries.
-- **Non-blocking execution:** FastAPI returns `202` with a task ID while a Celery worker runs the pipeline.
-- **Research dashboard:** Next.js 15 / React 19 UI with live task status, activity timeline, Markdown report rendering, and copy / download / JSON export.
-- **Containerized stack:** Docker Compose with four services (Redis, API, Celery worker, frontend).
+| Capability | What It Does |
+|---|---|
+| **Agentic AI orchestration** | A LangGraph `StateGraph` coordinates Searcher, Scraper and Finalizer nodes with shared state and conditional error routing. |
+| **Intelligent search** | Tavily advanced search discovers candidate sources and the Searcher filters selected social-media and video domains. |
+| **Layered browser retrieval** | A primary SeleniumBase UC + Playwright (CDP) engine, followed by two independent fallbacks (SP2 and SP3 Nodriver), maximizes best-effort retrieval success. |
+| **Structured LLM extraction** | OpenRouter models, accessed through the OpenAI Python SDK, return data parsed and validated through Pydantic. |
+| **Resilient LLM access** | Configurable model, API key rotation, rate-limit retry handling and input text truncation. |
+| **Asynchronous execution** | Long-running research never blocks an HTTP request; Celery workers process jobs through Redis. |
+| **Interactive dashboard** | Dark, responsive Next.js interface with query submission, example queries, connection status and a configurable API base URL. |
+| **Live task monitoring** | Frontend polling shows Celery task status, task ID, elapsed time and an activity event history. |
+| **Markdown report generation** | The Finalizer builds an executive report with titles, price/budget information, availability and key specifications. |
+| **Export options** | Copy the report, or export it as Markdown or JSON. |
+| **Containerized infrastructure** | Docker Compose defines Redis, backend, Celery worker and frontend services. |
 
-## Architecture
+---
 
-```mermaid
-flowchart LR
-  User([User]):::ext
+## System Architecture
 
-  subgraph FE["Frontend"]
-    UI["Next.js Dashboard"]:::fe
-    Report["Report Display<br/>(React Markdown)"]:::fe
-  end
-
-  subgraph API["API Layer"]
-    FastAPI["FastAPI<br/>POST /run-agent<br/>GET /task-status"]:::api
-  end
-
-  subgraph Q["Queue Infrastructure"]
-    Broker[("Redis<br/>Broker")]:::queue
-    Result[("Redis<br/>Task Result")]:::queue
-    Worker["Celery Worker"]:::queue
-  end
-
-  subgraph G["Agent Orchestration · LangGraph"]
-    Searcher["searcher"]:::agent
-    Scraper["scraper"]:::agent
-    Finalizer["finalizer<br/>Markdown report"]:::agent
-  end
-
-  subgraph B["Browser Retrieval"]
-    Browser["SeleniumBase + Playwright<br/>→ Playwright fallback<br/>→ Nodriver fallback"]:::browser
-  end
-
-  subgraph AI["AI Extraction"]
-    Clean["HTML Cleaning<br/>BeautifulSoup + html2text"]:::ai
-    LLM["OpenRouter LLM"]:::ai
-    Schema["Pydantic<br/>Structured Output"]:::ai
-  end
-
-  Tavily["Tavily Search"]:::ext
-  Sites["Target Websites"]:::ext
-
-  User --> UI
-  UI -->|submit query| FastAPI
-  FastAPI -->|enqueue| Broker
-  Broker --> Worker
-  Worker --> Searcher
-  Searcher <--> Tavily
-  Searcher --> Scraper
-  Scraper --> Browser
-  Browser <--> Sites
-  Browser --> Clean
-  Clean --> LLM
-  LLM --> Schema
-  Schema --> Finalizer
-  Finalizer --> Result
-  Result --> FastAPI
-  UI -.->|poll ~2.2s| FastAPI
-  FastAPI --> Report
-  Report --> User
-
-  classDef fe fill:#0f2a44,stroke:#38bdf8,color:#e6f6ff
-  classDef api fill:#0b3b3f,stroke:#2dd4bf,color:#e6fffb
-  classDef queue fill:#3a2a0a,stroke:#f59e0b,color:#fff3d6
-  classDef agent fill:#2a1f4d,stroke:#a78bfa,color:#f1ebff
-  classDef browser fill:#0d3340,stroke:#22d3ee,color:#e0fbff
-  classDef ai fill:#241c44,stroke:#8b5cf6,color:#efe9ff
-  classDef ext fill:#161b26,stroke:#64748b,color:#e2e8f0
-```
-
-## End-to-End Workflow
+CogniPulse is organized into five cooperating layers. The diagram below shows the complete request lifecycle from the user's query to the rendered report.
 
 ```mermaid
-flowchart LR
-  Q["Research Query"] --> S["Tavily Search<br/>(advanced, max 5 URLs)"]
-  S -->|error| X["Stop graph"]
-  S --> U["URL Discovery"]
-  U --> P["Primary:<br/>SeleniumBase + Playwright"]
-  P -->|fails| F1["Fallback 1 · sp2<br/>Playwright"]
-  F1 -->|fails| F2["Fallback 2 · sp3<br/>Isolated Nodriver"]
-  P --> C["HTML Cleaning"]
-  F1 --> C
-  F2 --> C
-  C --> L["LLM Extraction"]
-  L --> D["Structured Data<br/>(Pydantic)"]
-  D --> R["Markdown Report"]
+%%{init: {"theme": "dark", "flowchart": {"curve": "basis", "nodeSpacing": 40, "rankSpacing": 46}, "themeVariables": {"fontSize": "14px", "lineColor": "#64748B"}}}%%
+flowchart TB
+    classDef actor fill:#101827,stroke:#94A3B8,stroke-width:2px,color:#F8FAFC
+    classDef ui fill:#2563EB,stroke:#93C5FD,stroke-width:2px,color:#F8FAFC
+    classDef api fill:#0891B2,stroke:#67E8F9,stroke-width:2px,color:#F8FAFC
+    classDef queue fill:#059669,stroke:#6EE7B7,stroke-width:2px,color:#F8FAFC
+    classDef agent fill:#7C3AED,stroke:#C4B5FD,stroke-width:2px,color:#F8FAFC
+    classDef data fill:#101827,stroke:#38BDF8,stroke-width:2px,color:#F8FAFC
+    classDef ext fill:#D97706,stroke:#FCD34D,stroke-width:2px,color:#101827
+    classDef out fill:#101827,stroke:#34D399,stroke-width:2px,color:#F8FAFC
 
-  classDef n fill:#0f1a2e,stroke:#22d3ee,color:#e0fbff
-  classDef bad fill:#3a2a0a,stroke:#f59e0b,color:#fff3d6
-  class Q,S,U,P,F1,F2,C,L,D,R n
-  class X bad
+    USER["<b>User / Researcher</b><br/>Natural-language research query"]:::actor
+    FE["<b>Next.js Frontend</b><br/>React 19 · TypeScript · Query form"]:::ui
+    API["<b>FastAPI REST API</b><br/>POST /api/v1/run-agent<br/>Pydantic validation"]:::api
+    DISP["<b>Celery Task Dispatch</b><br/>Job queued, task_id created"]:::queue
+    BROKER[("<b>Redis</b><br/>Message broker")]:::queue
+    WORKER["<b>Celery Worker</b><br/>Executes the research task"]:::queue
+    LG["<b>LangGraph Workflow</b><br/>StateGraph · shared state"]:::agent
+    SEARCH["<b>Searcher Node</b><br/>Query to candidate URLs"]:::agent
+    TAV["<b>Tavily Search API</b><br/>External · advanced search · up to 5 URLs"]:::ext
+    SCRAPE["<b>Scraper Node</b><br/>Retrieve, clean, extract"]:::agent
+    ENGINE["<b>Scraping Engine</b><br/>Layered retrieval strategy"]:::data
+    BROWSER["<b>Browser Retrieval + Fallbacks</b><br/>Primary · SP2 · SP3 Nodriver"]:::data
+    CLEAN["<b>BeautifulSoup + html2text</b><br/>HTML to readable text"]:::data
+    LLM["<b>OpenRouter LLM</b><br/>External · via OpenAI SDK<br/>max 3 concurrent parses"]:::ext
+    PYD["<b>Pydantic Structured Extraction</b><br/>Validated items + summaries"]:::data
+    FIN["<b>Finalizer Node</b><br/>Assemble executive report"]:::agent
+    REPORT["<b>Markdown Intelligence Report</b><br/>final_report"]:::out
+    RESULT[("<b>Redis Result Backend</b><br/>Task state + result")]:::queue
+    STATUS["<b>Task Status API</b><br/>GET /api/v1/task-status/task_id"]:::api
+    DASH["<b>Frontend Report Dashboard</b><br/>Polls ~2.2 s · renders · exports"]:::ui
+
+    USER --> FE
+    FE -->|"submit query"| API
+    API -.->|"202 Accepted + task_id"| FE
+    API --> DISP
+    DISP -->|"enqueue"| BROKER
+    BROKER -->|"deliver task"| WORKER
+    WORKER -->|"invoke graph"| LG
+    LG --> SEARCH
+    SEARCH -->|"search request"| TAV
+    TAV -->|"discovered URLs"| SCRAPE
+    SCRAPE --> ENGINE
+    ENGINE --> BROWSER
+    BROWSER -->|"raw HTML"| CLEAN
+    CLEAN -->|"clean text"| LLM
+    LLM -->|"model response"| PYD
+    PYD -->|"validated items"| FIN
+    FIN --> REPORT
+    REPORT -->|"store task result"| RESULT
+    RESULT -->|"read state + result"| STATUS
+    STATUS -->|"JSON status + report"| DASH
 ```
+
+**Legend:** ⬛ user and data-processing steps · 🟦 presentation layer · 🔷 API layer · 🟩 asynchronous execution layer · 🟪 agentic intelligence layer (LangGraph) · 🟧 external services
+
+### Architectural Layers
+
+| Layer | Technologies | Responsibility |
+|---|---|---|
+| **Presentation** | Next.js, React, TypeScript, Tailwind CSS | Query input, example queries, task monitoring, Markdown report display and export |
+| **API** | FastAPI, Uvicorn, Pydantic | Request validation, task dispatching, task-status retrieval |
+| **Asynchronous Execution** | Celery, Redis | Background job execution, message brokering, task result storage |
+| **Agentic Intelligence** | LangGraph `StateGraph` | Searcher, Scraper and Finalizer nodes with conditional error routing |
+| **Data Acquisition & AI** | Tavily, SeleniumBase, Playwright, Nodriver, BeautifulSoup, html2text, OpenRouter, OpenAI SDK, Pydantic | Source discovery, page retrieval, cleaning, structured LLM extraction |
+
+### Request Lifecycle
+
+1. The user submits a research query in the Next.js dashboard.
+2. The frontend calls `POST /api/v1/run-agent`.
+3. FastAPI validates the request, dispatches a Celery task and returns **HTTP 202 Accepted** with a task ID.
+4. Redis brokers the task to a Celery worker.
+5. The worker runs the LangGraph workflow: Searcher, Scraper, Finalizer.
+6. The final report and result metadata are stored in the Redis result backend.
+7. The frontend polls `GET /api/v1/task-status/{task_id}` roughly every 2.2 seconds.
+8. When the task is ready, the dashboard renders the Markdown report and enables copy and export.
+
+> [!IMPORTANT]
+> **Three separate responsibilities.** **LangGraph** manages the *agent workflow* (which step runs next and how errors route). **Celery** manages *asynchronous background execution* (running that workflow outside the HTTP request). **Redis** is the *broker and result backend* that moves tasks to workers and stores task state and results. They are complementary, not interchangeable.
+
+---
+
+## AI Agent Workflow
+
+The core of CogniPulse is a LangGraph `StateGraph` with three primary nodes. Each node reads from and writes to shared graph state, and conditional edges decide whether to continue or terminate with an error.
+
+```mermaid
+%%{init: {"theme": "dark", "flowchart": {"curve": "basis", "nodeSpacing": 40, "rankSpacing": 48}, "themeVariables": {"fontSize": "14px", "lineColor": "#64748B"}}}%%
+flowchart TB
+    classDef terminal fill:#101827,stroke:#94A3B8,stroke-width:2px,color:#F8FAFC
+    classDef agent fill:#7C3AED,stroke:#C4B5FD,stroke-width:2px,color:#F8FAFC
+    classDef decision fill:#D97706,stroke:#FCD34D,stroke-width:2px,color:#101827
+    classDef success fill:#059669,stroke:#6EE7B7,stroke-width:2px,color:#F8FAFC
+    classDef failure fill:#DC2626,stroke:#FCA5A5,stroke-width:2px,color:#F8FAFC
+
+    START(["<b>START</b><br/>User research query"]):::terminal
+    SEARCHER["<b>SEARCHER</b><br/>Tavily advanced search<br/>Filter social / video domains<br/>Store URLs in graph state"]:::agent
+    CHECK1{"<b>Conditional check</b><br/>URLs found?"}:::decision
+    SCRAPER["<b>SCRAPER</b><br/>Layered browser retrieval<br/>Clean HTML and convert to text<br/>Structured LLM parsing"]:::agent
+    CHECK2{"<b>Conditional check</b><br/>Items extracted?"}:::decision
+    FINALIZER["<b>FINALIZER</b><br/>Combine items and summaries<br/>Build Markdown executive report"]:::agent
+    ENDOK(["<b>END</b><br/>Report returned via Celery task"]):::success
+    ENDERR(["<b>END</b><br/>Error state returned"]):::failure
+
+    START --> SEARCHER
+    SEARCHER --> CHECK1
+    CHECK1 -->|"yes"| SCRAPER
+    CHECK1 -->|"no URLs found"| ENDERR
+    SCRAPER --> CHECK2
+    CHECK2 -->|"yes"| FINALIZER
+    CHECK2 -->|"nothing extracted"| ENDERR
+    FINALIZER --> ENDOK
+```
+
+### Node 1: Searcher
+
+- Receives the user's research query.
+- Sends it to the Tavily Search API using **advanced search**.
+- Retrieves **up to five** candidate URLs from the configured search request.
+- Filters selected social-media and video domains.
+- Stores the discovered URLs in the graph state.
+- Returns an **error state** if no URLs are found.
+
+### Node 2: Scraper
+
+- Receives the discovered URLs from graph state.
+- Retrieves each page through the layered browser-automation engine (see [Web Scraping Engineering](#web-scraping-engineering)).
+- Cleans extracted content and converts HTML into readable text.
+- Sends page content to the LLM parser for structured extraction.
+- Uses an **asyncio semaphore** to cap concurrent LLM parsing at **three operations**.
+- Collects extracted structured items and summaries.
+- Returns an **error state** when no structured items can be extracted.
+
+### Node 3: Finalizer
+
+- Collects the extracted items.
+- Combines the available market summaries.
+- Builds a structured Markdown executive intelligence report that includes extracted titles, price or budget information, availability status and key specifications.
+- Returns the generated report through the Celery background task.
+
+### Conditional Error Routing
+
+After the Searcher and after the Scraper, the graph checks whether the step produced usable output. If not, the workflow terminates with an error state instead of continuing with empty data. This prevents the Finalizer from generating a meaningless report and surfaces the failure to the caller through the task result.
+
+---
+
+## Web Scraping Engineering
+
+Modern websites often render their content with JavaScript, block automated clients or fail intermittently. CogniPulse addresses this with a **layered retrieval strategy**: if one retrieval method fails, a different one is attempted.
+
+| Layer | Technology | Approach |
+|---|---|---|
+| **Primary retrieval** | SeleniumBase UC + Playwright over Chrome DevTools Protocol (CDP) | UC browser management, Playwright attached over CDP, dynamic rendering, randomized browser configurations, retry handling, CAPTCHA/block detection, HTML retrieval |
+| **Fallback 1: SP2** | Separate Playwright implementation | Additional browser context, page scrolling and interaction, secondary retrieval attempt |
+| **Fallback 2: SP3** | Nodriver | Isolated multiprocessing execution, timeout handling, process cleanup |
+| **Cleaning** | BeautifulSoup4 | Cleans retrieved HTML content |
+| **Conversion** | html2text | Converts cleaned HTML into readable Markdown-style text for the LLM |
+
+```text
+Target URL
+   │
+   ├─► Primary retrieval  (SeleniumBase UC + Playwright via CDP)
+   │       └─ if it fails ─► SP2 fallback  (separate Playwright implementation)
+   │                              └─ if it fails ─► SP3 fallback  (Nodriver, isolated process)
+   ▼
+Raw HTML ─► BeautifulSoup cleaning ─► html2text conversion ─► Readable text for the LLM parser
+```
+
+**Why layers?** Each layer uses a different browser-control approach. A failure mode that affects one (a rendering quirk, a blocked session, a hung browser) is less likely to affect all of them. Running Nodriver in an isolated process with timeouts and cleanup also keeps a misbehaving browser from compromising the worker.
+
+> [!WARNING]
+> Retrieval is **best-effort and website-dependent**. CogniPulse does not claim to bypass every CAPTCHA, bot-protection system or access restriction, and it should only be used on content you are permitted to access.
+
+---
+
+## Structured AI Extraction
+
+### From Unstructured Pages to Structured Intelligence
+
+A web page is **unstructured**: navigation, marketing copy, prices, specifications and availability are mixed into one stream of text. Reports and comparisons need **structured** data with predictable fields. The parser bridges that gap.
+
+| Stage | Description |
+|---|---|
+| **Input** | Cleaned, readable page text produced by BeautifulSoup and html2text; long inputs are truncated before being sent to the model |
+| **Model access** | OpenRouter as the LLM gateway, called through the OpenAI Python SDK |
+| **Model selection** | Configurable with the `llm_model_name` environment variable, with a configured default/fallback |
+| **Resilience** | API key rotation and retry handling for rate-limit responses |
+| **Validation** | Responses are parsed and validated against Pydantic schemas |
+| **Output** | Structured competitor/product items (titles, price or budget information, availability, key specifications) plus market summaries |
+
+> [!NOTE]
+> CogniPulse uses existing LLMs through OpenRouter. It does **not** include fine-tuning, model training or a proprietary model.
+
+**Conceptual illustration (not the exact schema):**
+
+| Raw page fragment | Structured result |
+|---|---|
+| *"Pro plan: $24/user/month, billed annually. Includes timeline view, API access and priority support. In stock."* | Title or product name, price or budget information, availability status, key specifications |
+
+Using Pydantic means a malformed or incomplete model response is detected at the schema boundary instead of silently flowing into the final report.
+
+---
+
+## Asynchronous Background Processing
+
+A CogniPulse run searches the web, drives browsers and calls an LLM several times. That can take well over a minute, far too long to hold an HTTP request open. The application therefore uses a standard asynchronous job pattern.
+
+| Component | Role |
+|---|---|
+| **FastAPI** | Validates the request, dispatches a Celery task and immediately returns **HTTP 202 Accepted** with a task ID and status endpoint |
+| **Celery** | Defines and executes the background task that runs the LangGraph workflow |
+| **Redis (broker)** | Delivers queued tasks to the worker |
+| **Redis (result backend)** | Stores task state and the final result |
+| **Celery worker** | Pulls tasks from the queue and runs the research pipeline |
+| **Status polling** | The frontend repeatedly calls `GET /api/v1/task-status/{task_id}` until the task is ready |
+| **Result retrieval** | When ready, the task result contains the final report and execution metadata |
+
+```text
+POST /api/v1/run-agent ──► 202 Accepted + task_id
+                              │
+        Celery worker runs LangGraph workflow in the background
+                              │
+GET /api/v1/task-status/{id} ──► PENDING ... SUCCESS ──► result with final_report
+```
+
+---
 
 ## Technology Stack
 
-| Category | Technologies |
+### Active in the Application
+
+| Technology | Category | Purpose in CogniPulse | Engineering Knowledge Demonstrated |
+|---|---|---|---|
+| **Python 3.12** | Backend | Main backend language | Modern Python, async patterns, modular service design |
+| **FastAPI** | Backend | REST API, request validation, task dispatch and status endpoints | API design, HTTP semantics (202 Accepted), OpenAPI documentation |
+| **Uvicorn** | Backend | ASGI server for FastAPI | ASGI application serving |
+| **Pydantic v2** | Backend / AI | Request validation and structured LLM output schemas | Schema-first design, data validation at system boundaries |
+| **asyncio** | Backend | Concurrency control, including the 3-operation LLM semaphore | Asynchronous programming, bounded concurrency |
+| **python-dotenv** | Backend | Loads environment configuration | Secrets and configuration management |
+| **LangGraph** | Agent orchestration | Stateful Searcher, Scraper, Finalizer workflow with conditional routing | Agentic AI design, state machines, error-aware flow control |
+| **Celery** | Distributed systems | Background execution of the research workflow | Task queues, worker processes, non-blocking API design |
+| **Redis** | Distributed systems | Celery message broker and result backend | Broker/result-backend architecture |
+| **OpenRouter** | AI | LLM API gateway with configurable model | Provider-agnostic LLM integration |
+| **OpenAI Python SDK** | AI | OpenRouter-compatible model communication | SDK integration, API compatibility |
+| **Tavily Search API** | Search | Intelligent web source discovery | Search API integration, source filtering |
+| **Playwright** | Browser automation | Dynamic page retrieval (primary over CDP, plus SP2 fallback) | Headless/real-browser automation, CDP integration |
+| **SeleniumBase** | Browser automation | UC browser management and CDP integration | Browser lifecycle management, anti-fragility techniques |
+| **Nodriver** | Browser automation | SP3 fallback retrieval in an isolated process | Multiprocessing isolation, timeout and cleanup handling |
+| **BeautifulSoup4** | Data processing | HTML content cleaning | HTML parsing and data cleaning |
+| **html2text** | Data processing | Converts cleaned HTML to readable Markdown-style text | Preparing unstructured data for LLM consumption |
+| **Next.js 15** | Frontend | Application framework | Modern React framework usage |
+| **React 19** | Frontend | Component-based dashboard UI | Component architecture, state and effects |
+| **TypeScript 5.9** | Frontend | Type-safe frontend code | Static typing in UI code |
+| **Tailwind CSS** | Frontend | Styling foundation for the dark, responsive interface | Utility-first, responsive design |
+| **Framer Motion** | Frontend | UI transitions and animations | Interaction and motion design |
+| **GSAP + ScrollTrigger** | Frontend | Scroll-triggered animations and effects | Scroll-based animation |
+| **Lucide React** | Frontend | Interface iconography | Icon system integration |
+| **React Markdown + Remark GFM** | Frontend | Renders the report with GitHub Flavored Markdown support | Safe Markdown rendering, tables and lists |
+| **Docker** | DevOps | Backend (Python 3.12.8) and frontend (Node.js 22 Alpine) images | Containerization |
+| **Docker Compose** | DevOps | Four-service local stack: Redis, backend, Celery worker, frontend | Multi-container orchestration |
+
+### Present in the Repository but Not Part of the Active Workflow
+
+| Item | Status |
 |---|---|
-| **Backend** | Python 3.12, FastAPI, Uvicorn, Pydantic v2, asyncio, Celery, Redis |
-| **Agentic AI & LLM** | LangGraph (StateGraph, conditional routing), OpenRouter, OpenAI Python SDK, structured outputs, API-key rotation, retry handling |
-| **Search & Extraction** | Tavily Search API, SeleniumBase, Playwright, Nodriver, BeautifulSoup4, html2text, Chromium |
-| **Frontend** | Next.js 15, React 19, TypeScript, React Markdown, Remark GFM, Framer Motion, GSAP + ScrollTrigger, Lucide React |
-| **DevOps** | Docker, Docker Compose, environment-based configuration |
+| **Three.js hero component** (`components/hero-scene.tsx`) | Exists in the repository but is **not imported** into the active main page. No 3D scene is a live feature. |
+| **Browser-local run-storage helper** (`lib/`) | A helper exists, but the active main page does not integrate a persistent recent-run history. |
+| **Legacy helper files and documentation** | Some frontend files still reference an earlier iteration of the project (BidForge, with a proposal-generation workflow). They are not part of the active application, which is CogniPulse and communicates only with the endpoints documented below. |
 
-## Engineering Skills Demonstrated
+---
 
-| Area | Demonstrated in this project |
+## Frontend Experience
+
+The active frontend is a dark, modern, responsive dashboard built with Next.js, React and TypeScript.
+
+| Area | Implemented Behavior |
 |---|---|
-| **Python & Backend** | REST API design with FastAPI, Pydantic v2 models, asyncio, error handling, modular backend layout |
-| **Agentic AI & LLM** | LangGraph state management and conditional routing, OpenAI-compatible integration via OpenRouter, schema-validated extraction, key rotation, retries |
-| **Web Automation** | Multi-engine browser retrieval, dynamic page rendering, HTML parsing and content normalization |
-| **Distributed Systems** | Celery task queues, Redis broker/result backend, task-status tracking, concurrency, multiprocessing isolation, timeout and process management |
-| **Full-Stack** | Next.js / React / TypeScript dashboard, REST integration, Markdown rendering, UI animation |
-| **DevOps** | Multi-service Docker Compose setup, multi-stage frontend image, environment-based configuration |
+| **Research input** | Natural-language query submission with ready-made example queries |
+| **Connection awareness** | API connection status indicator (backend health checked about every 25 seconds) |
+| **Configuration** | Configurable API base URL |
+| **Execution monitoring** | Celery task status, task ID and elapsed execution time, with status polling about every 2.2 seconds while a task runs |
+| **Activity history** | An event history of frontend and API interactions |
+| **Report rendering** | Markdown intelligence report rendered with React Markdown and Remark GFM |
+| **Report actions** | Copy report, export as Markdown, export as JSON |
+| **Motion** | Framer Motion transitions and GSAP ScrollTrigger scroll animations |
+| **Layout** | Responsive sections for desktop and smaller screens |
 
-## Engineering Challenges & Solutions
+> [!NOTE]
+> The activity history records **frontend and API events**, not internal Celery worker logs. The progress visualization reflects the task status returned by the API and is **not** exact per-node LangGraph telemetry.
 
-| Challenge | Engineering approach |
-|---|---|
-| **JavaScript-rendered sites** | Browser automation (SeleniumBase + Playwright over CDP) with scrolling and interaction instead of plain HTTP requests. |
-| **Inconsistent page structure** | BeautifulSoup strips navigation, scripts, forms, iframes and ad/sidebar elements; html2text and whitespace normalization produce clean LLM input. |
-| **Browser failures and timeouts** | Retries, a Playwright fallback (`sp2`), and a Nodriver fallback (`sp3`) in an isolated multiprocessing worker with explicit timeouts and process-tree cleanup. |
-| **Long-running workflows** | Celery + Redis move the pipeline out of the request cycle; the API returns a task ID and exposes status for polling. |
-| **LLM consistency and rate limits** | Pydantic output schemas, configurable model name, multiple rotated OpenRouter keys, and retry handling for rate-limit errors. |
+---
 
-<details>
-<summary><b>Implementation details</b></summary>
+## API Documentation
 
-- **Search node:** Tavily advanced depth, up to 5 URLs per request; YouTube, Facebook, Instagram, TikTok and Vimeo are filtered out.
-- **Scraper node:** concurrent URL retrieval with asyncio; LLM parsing is limited by a semaphore of 3.
-- **LLM input:** raw page text capped at 100,000 characters.
-- **Schemas:** `CompetitorProductItem` (`title`, `price_or_budget`, `key_features_or_specs`, `status_or_availability`) and `EnterpriseCompetitorReport` (`competitor_name`, `overall_market_summary`, `items_found`, `pricing_strategy_insight`). The final report currently renders the summaries and item-level data, not every schema field.
-- **Celery:** JSON serialization, Redis broker and backend, task time limits, late acknowledgements, prefetch configuration; the Compose worker runs with the solo pool.
-- **Frontend:** the active dashboard lives in `frontend/app/page.tsx`.
+The backend exposes three endpoints. Interactive OpenAPI documentation is available at `/docs` when the server is running (for example `http://127.0.0.1:8800/docs`).
 
-</details>
+| Method | Endpoint | Purpose | Success Status |
+|---|---|---|---|
+| `GET` | `/` | Health check | `200 OK` |
+| `POST` | `/api/v1/run-agent` | Start a research task | `202 Accepted` |
+| `GET` | `/api/v1/task-status/{task_id}` | Retrieve task state and result | `200 OK` |
 
-## Quick Start
+> [!NOTE]
+> The JSON responses below are **illustrative examples, not actual production responses**. Use `/docs` for the authoritative schema. Invalid request bodies are rejected by FastAPI/Pydantic validation (typically `422 Unprocessable Entity`).
 
-**Prerequisites:** Python 3.12, Node.js, Chromium, a running Redis instance, a [Tavily](https://tavily.com) key and an [OpenRouter](https://openrouter.ai) key.
+### `GET /`: Health Check
+
+Reports backend availability, including service status, service name, version and documentation information.
 
 ```bash
-git clone https://github.com/<your-username>/CogniPulse-AI-Market-Intelligence.git
-cd CogniPulse-AI-Market-Intelligence
-cp .env.example .env        # then fill in your keys
+curl http://127.0.0.1:8800/
 ```
 
-### Environment variables
+### `POST /api/v1/run-agent`: Start a Research Task
+
+**Request body**
+
+```json
+{
+  "query": "Analyze AI automation market trends and competitors"
+}
+```
+
+```bash
+curl -X POST http://127.0.0.1:8800/api/v1/run-agent \
+  -H "Content-Type: application/json" \
+  -d '{"query": "Analyze AI automation market trends and competitors"}'
+```
+
+**Illustrative response (`202 Accepted`)**
+
+```json
+{
+  "task_id": "example-task-id",
+  "status_url": "/api/v1/task-status/example-task-id"
+}
+```
+
+### `GET /api/v1/task-status/{task_id}`: Poll Task Status
+
+Returns the task ID, the Celery execution state, whether the task is ready, whether it succeeded, and the task result when available.
+
+```bash
+curl http://127.0.0.1:8800/api/v1/task-status/example-task-id
+```
+
+**Illustrative completed-task result**
+
+```json
+{
+  "status": "Success",
+  "task_id": "example-task-id",
+  "execution_time_seconds": 45.5,
+  "error_message": null,
+  "final_report": "# Enterprise Competitor Intelligence Report",
+  "items_extracted": 12
+}
+```
+
+### Task Lifecycle
+
+```text
+Submitted ──► Queued in Redis ──► Running in Celery worker ──► Success  (final_report available)
+                                                          └──► Failure  (error information available)
+```
+
+---
+
+## Project Structure
+
+```text
+CogniPulse/
+│
+├── backend/
+│   ├── agent_graphs.py        # FastAPI app, Celery app and LangGraph workflow entry point
+│   ├── search_setup.py        # Tavily search integration
+│   ├── scraper_engine.py      # Scraping orchestration
+│   ├── scraping_retr.py       # Browser retrieval implementation
+│   ├── scraping_retr_2.py     # Additional browser retrieval implementation
+│   ├── bs4_engine.py          # HTML cleaning
+│   ├── parser_engine.py       # LLM structured extraction
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── app/
+│   │   ├── page.tsx           # Active dashboard page
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── hero-scene.tsx     # Three.js hero (present, not imported by the active page)
+│   │   ├── scroll-motion.tsx
+│   │   └── ui/
+│   │
+│   ├── lib/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── next.config.mjs
+│   └── Dockerfile
+│
+├── docker-compose.yml
+├── .env.example
+├── frontend/.env.local.example
+├── project_run_commands
+└── README.md
+```
+
+---
+
+## Installation and Quick Start
+
+There are two ways to run CogniPulse: **local development** (recommended and described first) and **Docker Compose**, which needs one configuration adjustment before it works end to end.
+
+### Prerequisites
+
+| Requirement | Notes |
+|---|---|
+| **Python 3.12** | Matches the backend Docker image (Python 3.12.8) |
+| **Node.js 22** | Matches the frontend Docker image (Node.js 22 Alpine) |
+| **Redis** | Local install or a Redis container |
+| **Google Chrome** | Used by the browser-automation layers |
+| **Tavily API key** | For source discovery |
+| **OpenRouter API key** | For LLM extraction |
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/cognipulse-agentic-intelligence-engine.git
+cd cognipulse-agentic-intelligence-engine
+```
+
+### 2. Start Redis
+
+```bash
+docker run -d --name cognipulse-redis -p 6379:6379 redis:7-alpine
+```
+
+> On Windows, run Redis through Docker Desktop or WSL.
+
+### 3. Configure Backend Environment Variables
+
+Create `backend/.env` from the provided `.env.example`:
+
+```bash
+cp .env.example backend/.env
+```
 
 ```env
-TAVILY_API_KEYS=YOUR_TAVILY_API_KEY
-OPENROUTER_API_KEYS=YOUR_OPENROUTER_API_KEY
-llm_model_name=YOUR_OPENROUTER_MODEL
+TAVILY_API_KEYS=your_tavily_api_key
+OPENROUTER_API_KEYS=your_openrouter_api_key
+llm_model_name=your_openrouter_model
 REDIS_URL=redis://localhost:6379/0
 ```
 
-Both `*_API_KEYS` variables accept comma-separated values; the key-rotation logic cycles through them.
+| Variable | Purpose |
+|---|---|
+| `TAVILY_API_KEYS` | Tavily API key (the application also supports configured multi-key handling) |
+| `OPENROUTER_API_KEYS` | OpenRouter API key (supports key rotation when configured with multiple keys) |
+| `llm_model_name` | OpenRouter model identifier used for extraction |
+| `REDIS_URL` | Redis connection string used by Celery. Use `redis://localhost:6379/0` locally. |
 
-### Run locally
+> These are **example configurations**. Never commit real API keys, and never place backend secrets in `NEXT_PUBLIC_` variables.
+
+### 4. Install Backend Dependencies
+
+**macOS / Linux**
 
 ```bash
-# 1. Backend API
 cd backend
+python3.12 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn agent_graphs:app --host 0.0.0.0 --port 8800
+```
 
-# 2. Celery worker (separate terminal)
+**Windows PowerShell**
+
+```powershell
 cd backend
-celery -A agent_graphs.celery_app worker --loglevel=info -P solo
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+Copy-Item ..\.env.example .env
+```
 
-# 3. Frontend (separate terminal)
+If Playwright reports that browsers are missing, install them with `playwright install chromium`.
+
+### 5. Start the FastAPI Backend
+
+From the `backend/` directory, with the virtual environment active:
+
+```bash
+uvicorn agent_graphs:app --host 127.0.0.1 --port 8800
+```
+
+> **Port note:** running the module directly through its Python entry point uses port **8000**. The frontend example configuration and Docker Compose use **8800**, so use the command above for a consistent local setup.
+
+### 6. Start the Celery Worker
+
+Open a second terminal, activate the same virtual environment and run:
+
+```bash
+celery -A agent_graphs.celery_app worker --loglevel=info -P solo
+```
+
+> **Windows:** Celery's default prefork pool is not supported on Windows, so the **`-P solo`** pool is required there. The same command is used in this project for local development on all platforms.
+
+### 7. Configure and Start the Frontend
+
+```bash
 cd frontend
 npm install
+cp .env.local.example .env.local
+```
+
+```env
+NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8800
+```
+
+```bash
 npm run dev
 ```
 
-Open the dashboard at `http://localhost:3000` and the API docs at `http://localhost:8800/docs`.
+On Windows PowerShell, use `Copy-Item .env.local.example .env.local`.
 
-### Run with Docker Compose
+### 8. Open the Application
 
-Compose defines `redis`, `backend` (port `8800`), `celery_worker` and `frontend` (port `3000`).
+| Service | URL |
+|---|---|
+| **Dashboard** | `http://localhost:3000` |
+| **Backend health** | `http://127.0.0.1:8800/` |
+| **Interactive API docs** | `http://127.0.0.1:8800/docs` |
 
-> **Configuration required:** the supplied `docker-compose.yml` passes only `REDIS_URL` to the backend and worker. `TAVILY_API_KEYS`, `OPENROUTER_API_KEYS` and `llm_model_name` must also reach both services, for example by adding `env_file: .env` to `backend` and `celery_worker`:
->
-> ```yaml
-> backend:
->   env_file: .env
-> celery_worker:
->   env_file: .env
-> ```
+Submit one of the example queries and watch the task move from queued to complete.
+
+### Docker Compose
+
+`docker-compose.yml` defines four services (Redis, backend, Celery worker, frontend), publishes the backend on port **8800** and the frontend on port **3000**, and sets `REDIS_URL` for the containers.
+
+> [!IMPORTANT]
+> The current Compose file does **not** pass the required Tavily and OpenRouter variables to the backend and worker containers. Without them, the stack starts but research tasks cannot call the search or LLM providers. Add an `env_file` to **both** the backend and Celery worker services before running a real query.
+
+```yaml
+# docker-compose.yml: add to BOTH the backend and the Celery worker services
+    env_file:
+      - .env
+```
+
+Your root `.env` should then contain `TAVILY_API_KEYS`, `OPENROUTER_API_KEYS` and `llm_model_name`. The `REDIS_URL` already set in Compose (`redis://redis:6379/0`) points to the Redis container.
 
 ```bash
 docker compose up --build
 ```
 
-<details>
-<summary><b>Setup notes</b></summary>
+> The backend Dockerfile's default command references `api_main:app`, while the FastAPI application lives in `agent_graphs.py`. Docker Compose overrides the command with the correct module, so Compose runs correctly, but running the bare image without the override will not start the app. The frontend's API base URL can also be changed from the dashboard UI.
 
-- The backend Dockerfile's default command references `api_main:app`; Compose overrides it with `uvicorn agent_graphs:app --host 0.0.0.0 --port 8800`. Use that command, not the Dockerfile default.
-- Running `python agent_graphs.py` directly starts on port 8000 and is not the supported startup path.
-- The dashboard initializes its API base URL to `http://127.0.0.1:8800/` and does not read `NEXT_PUBLIC_API_BASE_URL`. Change the endpoint from the dashboard's API settings if needed.
-- A legacy frontend API helper references older proposal-generation routes. It is not the active CogniPulse API.
+---
 
-</details>
+## Engineering Challenges and Solutions
 
-## API Endpoints
-
-| Method | Endpoint | Purpose |
+| Engineering Challenge | Technical Approach | Engineering Value |
 |---|---|---|
-| `GET` | `/` | Backend service health/status |
-| `POST` | `/api/v1/run-agent` | Submit a research query and enqueue a background task (returns `202` + task ID) |
-| `GET` | `/api/v1/task-status/{task_id}` | Task state, readiness, success status where available, and result |
-| `GET` | `/docs` | Interactive Swagger documentation |
+| **Extracting data from JavaScript-rendered websites** | Real browser rendering through SeleniumBase UC and Playwright over CDP instead of plain HTTP requests | Captures content that never appears in a static HTML response |
+| **Website retrieval failures** | Retry handling, randomized browser configurations, CAPTCHA/block detection and a fallback chain | Improves best-effort retrieval reliability without pretending failures never occur |
+| **Layered scraping fallbacks** | Primary retrieval, then SP2 (separate Playwright implementation), then SP3 (Nodriver) | Different browser-control approaches reduce the chance that one failure mode blocks every attempt |
+| **Browser lifecycle and resource management** | Managed browser sessions, separate browser contexts, timeouts and process cleanup | Limits hung or leaked browser processes inside a long-running worker |
+| **Multiprocessing isolation** | Nodriver retrieval runs in an isolated process with timeout handling | A stuck fallback can be terminated without taking down the worker's main process |
+| **Long-running AI workflows** | A multi-stage workflow executed outside the request cycle | HTTP requests stay fast and the user is never left waiting on an open connection |
+| **Background task orchestration** | FastAPI dispatches a Celery task; Redis brokers it to a worker | Cleanly separates API handling from heavy computation and enables horizontal worker scaling |
+| **LLM rate limits** | Retry handling for rate-limit responses | Transient provider limits do not immediately fail the pipeline |
+| **Multiple API key management** | Configurable single/multi-key handling with key rotation | Spreads load across keys and reduces single-key exhaustion |
+| **Unstructured-to-structured data transformation** | Cleaning, text conversion, input truncation and LLM extraction into defined fields | Turns inconsistent web pages into comparable, report-ready records |
+| **AI output validation** | Pydantic schemas validate model responses | Malformed model output is caught at a defined boundary |
+| **Asynchronous concurrency management** | An asyncio semaphore limits concurrent LLM parsing to three operations | Bounds provider load and rate-limit pressure while still parsing in parallel |
 
-**Submit a query**
+---
 
-```bash
-curl -X POST http://localhost:8800/api/v1/run-agent \
-  -H "Content-Type: application/json" \
-  -d '{"query": "Analyze the electric vehicle market and identify competitors, product prices, and key specifications."}'
-```
+## Technical Skills Demonstrated
 
-**Check task status** (use the task ID returned above)
+Every skill below is tied to a concrete part of the implementation.
 
-```bash
-curl http://localhost:8800/api/v1/task-status/<task_id>
-```
+### Backend Engineering
 
-## Project Structure
+| Skill | Demonstrated By |
+|---|---|
+| **Python** | Backend services, async code and modular engines for search, scraping, cleaning and parsing |
+| **FastAPI & REST API design** | Health, task-submission and status endpoints; HTTP 202 for accepted background work |
+| **Pydantic** | Request validation and LLM output schemas |
+| **Async programming** | Semaphore-limited concurrent LLM parsing |
+| **Uvicorn** | ASGI serving of the API |
 
-```text
-CogniPulse-AI-Market-Intelligence/
-├── backend/
-│   ├── agent_graphs.py      # FastAPI app, Celery app, LangGraph workflow
-│   ├── search_setup.py      # Tavily search
-│   ├── scraper_engine.py    # Scraping orchestration
-│   ├── scraping_retr.py     # Playwright fallback (sp2)
-│   ├── scraping_retr_2.py   # Isolated Nodriver fallback (sp3)
-│   ├── parser_engine.py     # LLM extraction and Pydantic schemas
-│   ├── bs4_engine.py        # HTML cleaning
-│   ├── Dockerfile
-│   └── requirements.txt
-├── frontend/
-│   ├── app/                 # Dashboard (page.tsx)
-│   ├── components/
-│   ├── lib/
-│   ├── Dockerfile
-│   └── package.json
-├── docker-compose.yml
-├── .env.example
-├── requirements.txt
-└── README.md
-```
+### Agentic AI Engineering
 
-## Current Limitations
+| Skill | Demonstrated By |
+|---|---|
+| **LangGraph / StateGraph orchestration** | Three-node Searcher, Scraper, Finalizer workflow with shared graph state |
+| **Multi-stage agent workflows** | Discovery, retrieval and extraction, then report synthesis |
+| **Conditional routing** | Error checks that terminate the graph when no URLs or items are produced |
+| **LLM API integration** | OpenRouter through the OpenAI SDK with a configurable model |
+| **Structured AI extraction** | Page text converted to validated structured items |
 
-This is a portfolio implementation, not a production-hardened system.
+### AI and Data Engineering
 
-- No authentication or authorization; FastAPI CORS allows all origins.
-- No database-backed report storage or persistent research history; the activity timeline covers the current run only.
-- Redis has no persistent volume or health check in the supplied Compose file.
-- Web scraping is best-effort and cannot guarantee access to every website.
-- Each search is limited to a maximum of five URLs.
-- The supplied Celery worker uses the solo pool.
-- LLM output should be reviewed by a human before informing business decisions.
-- No complete automated test suite or CI/CD pipeline is established yet.
+| Skill | Demonstrated By |
+|---|---|
+| **OpenRouter & OpenAI SDK** | Provider-flexible LLM access |
+| **Schema validation** | Pydantic-validated model responses |
+| **HTML parsing & data cleaning** | BeautifulSoup cleaning of retrieved pages |
+| **Text preparation for LLMs** | html2text conversion and input truncation |
+| **Structured information extraction** | Titles, price/budget, availability and key specifications |
+
+### Web Scraping and Browser Automation
+
+| Skill | Demonstrated By |
+|---|---|
+| **Search API integration (Tavily)** | Advanced search, URL selection and domain filtering |
+| **Playwright** | Primary CDP-attached retrieval and the SP2 fallback |
+| **SeleniumBase** | UC browser management and CDP integration |
+| **Nodriver** | Isolated, timeout-guarded SP3 fallback |
+| **BeautifulSoup & html2text** | Cleaning and converting retrieved HTML |
+
+### Distributed Systems
+
+| Skill | Demonstrated By |
+|---|---|
+| **Celery** | Background execution of the full research workflow |
+| **Redis** | Message broker and result backend |
+| **Background task processing** | HTTP 202 submission with decoupled worker execution |
+| **Task status management** | Status endpoint exposing state, readiness, success and result |
+
+### Frontend Engineering
+
+| Skill | Demonstrated By |
+|---|---|
+| **Next.js & React** | Interactive research dashboard |
+| **TypeScript** | Type-safe UI code |
+| **Responsive UI** | Dark, responsive dashboard sections |
+| **Framer Motion & GSAP** | UI transitions and scroll-triggered animation |
+| **Markdown rendering** | React Markdown with GFM for report display, plus copy and export actions |
+| **Polling UX** | Task-status polling with elapsed time, task ID and activity history |
+
+### DevOps
+
+| Skill | Demonstrated By |
+|---|---|
+| **Docker** | Backend and frontend container images |
+| **Docker Compose** | Four-service multi-container stack |
+| **Environment configuration** | API keys, model name and Redis URL kept out of source code |
+| **Multi-container architecture** | Separate API, worker, broker and frontend services |
+
+---
+
+## Limitations and Production Considerations
+
+CogniPulse is a functional engineering project, not a hardened production service. These are the current limitations.
+
+| Area | Current State | Path Toward Production |
+|---|---|---|
+| **Web retrieval** | Best-effort and website-dependent; CAPTCHAs and access restrictions can block retrieval | Source-specific adapters, compliant data providers, improved retry policies |
+| **LLM accuracy** | Extracted values can be incomplete or wrong; human review is required | Review workflows and stronger validation rules |
+| **Persistence** | No persistent database or stored research history | Database-backed run and report storage |
+| **Authentication** | No user authentication or authorization | Auth, per-user access control and rate limiting |
+| **Source citations** | Final reports do not include a complete source-URL citation system | Per-item source provenance in extracted data and reports |
+| **Progress visibility** | No real-time per-node telemetry; progress is derived from task status | Streaming events from the LangGraph workflow |
+| **Live updates** | HTTP polling instead of WebSockets or Server-Sent Events | WebSocket or SSE progress channel |
+| **Docker setup** | Compose needs an `env_file` for API keys, and the backend Dockerfile's default command references `api_main:app` (overridden by Compose) | Align Dockerfile and Compose configuration |
+| **CORS** | Permissive for development (all origins) | Restrict to trusted origins |
+| **Observability** | Basic logging only; no monitoring platform | Structured logging, metrics and tracing |
+| **Testing & CI** | Automated test suite and CI/CD pipeline not yet part of the project | Unit, integration and workflow tests with CI |
+
+Not currently demonstrated by the active implementation: a vector database, a complete RAG pipeline, a human approval/resume workflow or user accounts.
+
+---
 
 ## Future Roadmap
 
-*Planned work only; none of these are implemented.*
+> The items below are **proposed future work**. They are not implemented features.
 
-- [ ] Persistent report and task storage with research history
-- [ ] Task cancellation
-- [ ] Authentication, authorization and restricted CORS
-- [ ] Improved observability
-- [ ] Automated testing and CI/CD
-- [ ] Production-oriented deployment configuration
-- [ ] Configurable research depth
-- [ ] Advanced report exports
-- [ ] Improved task and worker scalability
+- [ ] Source URL provenance and citations in reports
+- [ ] Persistent research history
+- [ ] Database integration
+- [ ] Authentication and authorization
+- [ ] WebSocket or Server-Sent Events progress updates
+- [ ] Per-node LangGraph monitoring
+- [ ] Human-in-the-loop review
+- [ ] Improved retry policies
+- [ ] Automated tests
+- [ ] CI/CD pipeline
+- [ ] Production observability
+- [ ] Additional report export formats
 
-## Author
+---
 
-**[Mr Faizan]**: Software Engineer, Python, Agentic AI & Full-Stack Development
-[GitHub](https://github.com/mrfaizan-dev) · [LinkedIn](https://www.linkedin.com/in/<your-handle>)
+## Security and Responsible Usage
+
+- **Keep API keys server-side.** Tavily and OpenRouter keys belong in backend environment variables only, never in `NEXT_PUBLIC_` variables or committed files.
+- **Protect environment files.** Keep `.env` files out of version control and use a secrets manager in deployed environments.
+- **Add authentication and rate limiting before any public deployment.** The current API has neither.
+- **Treat URL fetching as a security boundary.** A public deployment needs URL validation and SSRF protections.
+- **Respect target websites.** Follow terms of service and robots policies, and avoid collecting private or restricted content.
+- **Review AI-generated findings.** Verify important facts against original sources before making business decisions.
+
+---
+
+## Project Summary
+
+CogniPulse is a full-stack agentic AI application that automates the market research loop end to end. A Next.js dashboard submits a natural-language query to a FastAPI backend; Celery and Redis run the work asynchronously; and a LangGraph workflow discovers sources with Tavily, retrieves pages through a layered browser-automation engine, cleans the content, extracts Pydantic-validated structured data through OpenRouter, and compiles a Markdown executive intelligence report.
+
+Its engineering value lies in how the pieces fit together: a stateful agent workflow with explicit error routing, resilient retrieval with isolated fallbacks, bounded LLM concurrency with retry and key rotation, a clean separation between API, worker and agent responsibilities, and honest documentation of its current limits and next steps.
+
+---
+
+## Developer Attribution
+
+Designed and developed by **Mr Faizan**.
+
+<div align="center">
+
+<sub>CogniPulse: Autonomous AI Market Intelligence</sub>
+
+</div>
