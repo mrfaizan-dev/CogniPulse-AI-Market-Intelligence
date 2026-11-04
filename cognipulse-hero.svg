@@ -1,0 +1,416 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="tH dH" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxMzYxMDY3OC1lODI4LTQzYWEtYmU3NC05MjExZWFkMWJmYmYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaK7dXlj5hxMFbNF4InkVYZQAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxNjkyMDc0My1hMmI1LTQxZGYtYTQ0NS1hNTRjYjZjZDMwZGFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoIB+k6hZnWd8MXSv/I/DEpwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggN73uEZ1qEabzqD+/meV7PXhSyWrSYeFiihr/pdcoRjqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHFqtc3UxH+qzBkn4tCaRxIAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDgcaTP7lwYX/qoFtctQ9ByhGb+Aiy/NhoIV+Zu8AuqHGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBi7Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjEzNjEwNjc4LWU4MjgtNDNhYS1iZTc0LTkyMTFlYWQxYmZiZi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE1NDU4ZjQzLTEzNjQtNDc0Mi04NTAwLTc2ODBiMjVjMzA1NXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA3ve4RnWoRpvOoP7+Z5Xs9eFLJatJh4WKKGv+l1yhGOqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggAlMyR+uw5srMyfw4aRJ14fru7gU0AuY+W2Fj9gdtQPKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg3XJYuQi+TFis/l+HOERydmnMcABb9xkDA1i8wq/j4CN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQD6AZQPBForjlvLAUoKZNNwG2VkZCgvi/v4BxCZ1x20gpkZk+/vCYzxlaQAH9LnxiDsdc4leeabwLm04G3oBWbw=</c2pa:manifest></metadata>
+  <title id="tH">CogniPulse - Autonomous AI Market Intelligence</title>
+  <desc id="dH">Animated banner on a dark midnight-navy background showing the CogniPulse name, a pulsing neural network of data nodes with signals flowing from query to report, and the pipeline Search, Retrieve, Analyze, Structure, Intelligence.</desc>
+  <defs>
+    <linearGradient id="bgH" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/><stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <radialGradient id="glowAH" cx="0.80" cy="0.50" r="0.42">
+      <stop offset="0" stop-color="#2563EB" stop-opacity="0.30"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBH" cx="0.12" cy="0.10" r="0.35">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.18"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCH" cx="0.35" cy="1.0" r="0.35">
+      <stop offset="0" stop-color="#059669" stop-opacity="0.14"/><stop offset="1" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F8FAFC"/><stop offset="0.55" stop-color="#67E8F9"/><stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="borderH" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06B6D4"/><stop offset="0.5" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="sweepH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F8FAFC" stop-opacity="0"/><stop offset="0.5" stop-color="#67E8F9" stop-opacity="0.07"/><stop offset="1" stop-color="#F8FAFC" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="gridH" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.65"/>
+      <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="40 0" dur="24s" repeatCount="indefinite"/>
+    </pattern>
+    <filter id="glowH" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clipH"><rect width="1200" height="340" rx="18"/></clipPath>
+    <linearGradient id="netFadeH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000"/><stop offset="0.2" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="netMaskH"><rect x="610" y="0" width="590" height="340" fill="url(#netFadeH)"/></mask>
+  </defs>
+  <g clip-path="url(#clipH)">
+    <rect width="1200" height="340" fill="url(#bgH)"/>
+    <rect width="1200" height="340" fill="url(#gridH)"/>
+    <rect width="1200" height="340" fill="url(#glowAH)"/>
+    <rect width="1200" height="340" fill="url(#glowBH)"/>
+    <rect width="1200" height="340" fill="url(#glowCH)"/>
+    <rect x="-220" y="0" width="220" height="340" fill="url(#sweepH)">
+      <animate attributeName="x" from="-220" to="1200" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g mask="url(#netMaskH)">
+    <g stroke="#2563EB" stroke-width="1" opacity="0.20">
+      <line x1="690" y1="100" x2="800" y2="60"/>
+      <line x1="690" y1="100" x2="800" y2="115"/>
+      <line x1="690" y1="100" x2="800" y2="170"/>
+      <line x1="690" y1="100" x2="800" y2="225"/>
+      <line x1="690" y1="100" x2="800" y2="280"/>
+      <line x1="690" y1="170" x2="800" y2="60"/>
+      <line x1="690" y1="170" x2="800" y2="115"/>
+      <line x1="690" y1="170" x2="800" y2="170"/>
+      <line x1="690" y1="170" x2="800" y2="225"/>
+      <line x1="690" y1="170" x2="800" y2="280"/>
+      <line x1="690" y1="240" x2="800" y2="60"/>
+      <line x1="690" y1="240" x2="800" y2="115"/>
+      <line x1="690" y1="240" x2="800" y2="170"/>
+      <line x1="690" y1="240" x2="800" y2="225"/>
+      <line x1="690" y1="240" x2="800" y2="280"/>
+      <line x1="800" y1="60" x2="910" y2="85"/>
+      <line x1="800" y1="60" x2="910" y2="142"/>
+      <line x1="800" y1="60" x2="910" y2="198"/>
+      <line x1="800" y1="60" x2="910" y2="255"/>
+      <line x1="800" y1="115" x2="910" y2="85"/>
+      <line x1="800" y1="115" x2="910" y2="142"/>
+      <line x1="800" y1="115" x2="910" y2="198"/>
+      <line x1="800" y1="115" x2="910" y2="255"/>
+      <line x1="800" y1="170" x2="910" y2="85"/>
+      <line x1="800" y1="170" x2="910" y2="142"/>
+      <line x1="800" y1="170" x2="910" y2="198"/>
+      <line x1="800" y1="170" x2="910" y2="255"/>
+      <line x1="800" y1="225" x2="910" y2="85"/>
+      <line x1="800" y1="225" x2="910" y2="142"/>
+      <line x1="800" y1="225" x2="910" y2="198"/>
+      <line x1="800" y1="225" x2="910" y2="255"/>
+      <line x1="800" y1="280" x2="910" y2="85"/>
+      <line x1="800" y1="280" x2="910" y2="142"/>
+      <line x1="800" y1="280" x2="910" y2="198"/>
+      <line x1="800" y1="280" x2="910" y2="255"/>
+      <line x1="910" y1="85" x2="1020" y2="60"/>
+      <line x1="910" y1="85" x2="1020" y2="115"/>
+      <line x1="910" y1="85" x2="1020" y2="170"/>
+      <line x1="910" y1="85" x2="1020" y2="225"/>
+      <line x1="910" y1="85" x2="1020" y2="280"/>
+      <line x1="910" y1="142" x2="1020" y2="60"/>
+      <line x1="910" y1="142" x2="1020" y2="115"/>
+      <line x1="910" y1="142" x2="1020" y2="170"/>
+      <line x1="910" y1="142" x2="1020" y2="225"/>
+      <line x1="910" y1="142" x2="1020" y2="280"/>
+      <line x1="910" y1="198" x2="1020" y2="60"/>
+      <line x1="910" y1="198" x2="1020" y2="115"/>
+      <line x1="910" y1="198" x2="1020" y2="170"/>
+      <line x1="910" y1="198" x2="1020" y2="225"/>
+      <line x1="910" y1="198" x2="1020" y2="280"/>
+      <line x1="910" y1="255" x2="1020" y2="60"/>
+      <line x1="910" y1="255" x2="1020" y2="115"/>
+      <line x1="910" y1="255" x2="1020" y2="170"/>
+      <line x1="910" y1="255" x2="1020" y2="225"/>
+      <line x1="910" y1="255" x2="1020" y2="280"/>
+      <line x1="1020" y1="60" x2="1130" y2="115"/>
+      <line x1="1020" y1="60" x2="1130" y2="170"/>
+      <line x1="1020" y1="60" x2="1130" y2="225"/>
+      <line x1="1020" y1="115" x2="1130" y2="115"/>
+      <line x1="1020" y1="115" x2="1130" y2="170"/>
+      <line x1="1020" y1="115" x2="1130" y2="225"/>
+      <line x1="1020" y1="170" x2="1130" y2="115"/>
+      <line x1="1020" y1="170" x2="1130" y2="170"/>
+      <line x1="1020" y1="170" x2="1130" y2="225"/>
+      <line x1="1020" y1="225" x2="1130" y2="115"/>
+      <line x1="1020" y1="225" x2="1130" y2="170"/>
+      <line x1="1020" y1="225" x2="1130" y2="225"/>
+      <line x1="1020" y1="280" x2="1130" y2="115"/>
+      <line x1="1020" y1="280" x2="1130" y2="170"/>
+      <line x1="1020" y1="280" x2="1130" y2="225"/>
+    </g>
+    <g>
+      <path d="M690,170 L800,170 L910,142 L1020,170 L1130,170" fill="none" stroke="#06B6D4" stroke-width="1.6" opacity="0.30"/>
+      <path d="M690,100 L800,115 L910,198 L1020,225 L1130,115" fill="none" stroke="#06B6D4" stroke-width="1.6" opacity="0.30"/>
+      <path d="M690,240 L800,280 L910,255 L1020,115 L1130,225" fill="none" stroke="#06B6D4" stroke-width="1.6" opacity="0.30"/>
+      <line x1="1020" y1="60" x2="1130" y2="225" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1020" y1="115" x2="1130" y2="170" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1020" y1="280" x2="1130" y2="225" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1020" y1="225" x2="1130" y2="170" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.6s" repeatCount="indefinite"/>
+      </line>
+      <line x1="800" y1="170" x2="910" y2="142" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.7s" repeatCount="indefinite"/>
+      </line>
+      <line x1="800" y1="170" x2="910" y2="85" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="1020" y1="115" x2="1130" y2="225" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="910" y1="142" x2="1020" y2="60" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="910" y1="85" x2="1020" y2="280" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="910" y1="255" x2="1020" y2="60" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="690" y1="240" x2="800" y2="115" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="690" y1="170" x2="800" y2="115" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="800" y1="225" x2="910" y2="142" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.0s" repeatCount="indefinite"/>
+      </line>
+      <line x1="800" y1="115" x2="910" y2="85" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="690" y1="170" x2="800" y2="280" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="690" y1="170" x2="800" y2="60" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.9s" repeatCount="indefinite"/>
+      </line>
+      <line x1="800" y1="280" x2="910" y2="255" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="910" y1="255" x2="1020" y2="115" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 19" opacity="0.9">
+        <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.4s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    
+      <g>
+        <circle cx="690" cy="100" r="7" fill="#0B1120" stroke="#06B6D4" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="690" cy="100" r="3" fill="#06B6D4">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.0s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.0s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="690" cy="100" r="7" fill="none" stroke="#06B6D4" stroke-width="1.2" opacity="0">
+          <animate attributeName="r" values="7;22" dur="3.6s" begin="0.0s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0" dur="3.6s" begin="0.0s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="690" cy="170" r="7" fill="#0B1120" stroke="#06B6D4" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="690" cy="170" r="3" fill="#06B6D4">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.4s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="690" cy="240" r="7" fill="#0B1120" stroke="#06B6D4" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="690" cy="240" r="3" fill="#06B6D4">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="800" cy="60" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="800" cy="60" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="1.1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.1s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="800" cy="115" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="800" cy="115" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="800" cy="115" r="7" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0">
+          <animate attributeName="r" values="7;22" dur="3.6s" begin="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0" dur="3.6s" begin="1.5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="800" cy="170" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="800" cy="170" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="1.9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="800" cy="225" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="800" cy="225" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="2.2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="800" cy="280" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="800" cy="280" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="2.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="2.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="910" cy="85" r="7" fill="#0B1120" stroke="#7C3AED" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="910" cy="85" r="3" fill="#7C3AED">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="3.0s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="3.0s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="910" cy="85" r="7" fill="none" stroke="#7C3AED" stroke-width="1.2" opacity="0">
+          <animate attributeName="r" values="7;22" dur="3.6s" begin="3.0s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0" dur="3.6s" begin="3.0s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="910" cy="142" r="7" fill="#0B1120" stroke="#7C3AED" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="910" cy="142" r="3" fill="#7C3AED">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.1s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="910" cy="198" r="7" fill="#0B1120" stroke="#7C3AED" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="910" cy="198" r="3" fill="#7C3AED">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="910" cy="255" r="7" fill="#0B1120" stroke="#7C3AED" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="910" cy="255" r="3" fill="#7C3AED">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.9s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1020" cy="60" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1020" cy="60" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1020" cy="60" r="7" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0">
+          <animate attributeName="r" values="7;22" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1020" cy="115" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1020" cy="115" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="1.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1020" cy="170" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1020" cy="170" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="2.0s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="2.0s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1020" cy="225" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1020" cy="225" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="2.3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="2.3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1020" cy="280" r="7" fill="#0B1120" stroke="#2563EB" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1020" cy="280" r="3" fill="#2563EB">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="2.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="2.7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1020" cy="280" r="7" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0">
+          <animate attributeName="r" values="7;22" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0" dur="3.6s" begin="2.7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1130" cy="115" r="7" fill="#0B1120" stroke="#059669" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1130" cy="115" r="3" fill="#059669">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="3.1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="3.1s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1130" cy="170" r="7" fill="#0B1120" stroke="#059669" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1130" cy="170" r="3" fill="#059669">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g>
+        <circle cx="1130" cy="225" r="7" fill="#0B1120" stroke="#059669" stroke-width="2" filter="url(#glowH)"/>
+        <circle cx="1130" cy="225" r="3" fill="#059669">
+          <animate attributeName="r" values="2.4;4.2;2.4" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;1;0.6" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    <g>
+      <circle r="3.2" fill="#F8FAFC" filter="url(#glowH)" opacity="0">
+        <animateMotion path="M690,170 L800,170 L910,142 L1020,170 L1130,170" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="3.2" fill="#F8FAFC" filter="url(#glowH)" opacity="0">
+        <animateMotion path="M690,100 L800,115 L910,198 L1020,225 L1130,115" dur="5.2s" begin="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.2s" begin="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="3.2" fill="#F8FAFC" filter="url(#glowH)" opacity="0">
+        <animateMotion path="M690,240 L800,280 L910,255 L1020,115 L1130,225" dur="4.8s" begin="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.8s" begin="2.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <text x="690" y="320" text-anchor="middle" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748B">QUERY</text>
+    <text x="800" y="320" text-anchor="middle" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748B">TAVILY</text>
+    <text x="910" y="320" text-anchor="middle" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748B">BROWSER</text>
+    <text x="1020" y="320" text-anchor="middle" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748B">LLM</text>
+    <text x="1130" y="320" text-anchor="middle" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="1.5" fill="#64748B">REPORT</text>
+  </g>
+
+  <g>
+    <rect x="60" y="56" width="30" height="3" rx="1.5" fill="#06B6D4">
+      <animate attributeName="width" values="30;54;30" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="104" y="62" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#06B6D4" textLength="330" lengthAdjust="spacing">AUTONOMOUS AI MARKET INTELLIGENCE</text>
+    <text x="58" y="146" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="80" font-weight="800" fill="url(#titleH)" textLength="450" lengthAdjust="spacingAndGlyphs">CogniPulse</text>
+    <path d="M60,190 H210 L224,190 L234,164 L248,216 L260,174 L270,190 H590" pathLength="600" fill="none" stroke="#1E293B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60,190 H210 L224,190 L234,164 L248,216 L260,174 L270,190 H590" pathLength="600" fill="none" stroke="#06B6D4" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="70 530" filter="url(#glowH)">
+      <animate attributeName="stroke-dashoffset" from="70" to="-530" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+    </path>
+    <path d="M60,190 H210 L224,190 L234,164 L248,216 L260,174 L270,190 H590" pathLength="600" fill="none" stroke="#059669" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="70 530" filter="url(#glowH)">
+      <animate attributeName="stroke-dashoffset" from="70" to="-530" dur="4.5s" begin="2.25s" repeatCount="indefinite"/>
+    </path>
+    <text x="60" y="232" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" fill="#CBD5E1" textLength="520" lengthAdjust="spacing">From Natural-Language Research Queries to Structured Intelligence.</text>
+    <line x1="60" y1="268" x2="610" y2="268" stroke="#1E293B" stroke-width="2"/>
+    <circle cx="64" cy="268" r="4" fill="#06B6D4" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;1;1;0.35;0.35" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <text x="60" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" opacity="0.4" textLength="62" lengthAdjust="spacing">SEARCH
+        <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="0s" repeatCount="indefinite"/>
+      </text>
+<circle cx="156" cy="268" r="4" fill="#06B6D4" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;1;1;0.35;0.35" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="152" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" opacity="0.4" textLength="80" lengthAdjust="spacing">RETRIEVE
+        <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="2s" repeatCount="indefinite"/>
+      </text>
+<circle cx="268" cy="268" r="4" fill="#06B6D4" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;1;1;0.35;0.35" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="264" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" opacity="0.4" textLength="70" lengthAdjust="spacing">ANALYZE
+        <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="4s" repeatCount="indefinite"/>
+      </text>
+<circle cx="370" cy="268" r="4" fill="#06B6D4" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;1;1;0.35;0.35" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="366" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" opacity="0.4" textLength="92" lengthAdjust="spacing">STRUCTURE
+        <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="6s" repeatCount="indefinite"/>
+      </text>
+<circle cx="492" cy="268" r="4" fill="#06B6D4" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;1;1;0.35;0.35" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="488" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="700" fill="#F8FAFC" opacity="0.4" textLength="122" lengthAdjust="spacing">INTELLIGENCE
+        <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" keyTimes="0;0.05;0.2;0.25;1" dur="10s" begin="8s" repeatCount="indefinite"/>
+      </text>
+    <text x="135" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#334155">&#8594;</text>
+    <text x="247" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#334155">&#8594;</text>
+    <text x="349" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#334155">&#8594;</text>
+    <text x="471" y="296" font-family="'Inter','SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#334155">&#8594;</text>
+  </g>
+  <rect x="1" y="1" width="1198" height="338" rx="17" fill="none" stroke="url(#borderH)" stroke-width="1.5" opacity="0.55"/>
+</svg>
