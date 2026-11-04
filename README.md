@@ -8,7 +8,7 @@
 
 <h4>An AI-powered market intelligence and autonomous web research platform.</h4>
 Ask a question in plain English and receive a validated, executive-ready Markdown report built from live public web sources.<br>
-
+<br>
 ![Python](https://img.shields.io/badge/Python-3.12-0B1120?style=flat-square&logo=python&logoColor=06B6D4&labelColor=101827)
 ![FastAPI](https://img.shields.io/badge/FastAPI-REST_API-0B1120?style=flat-square&logo=fastapi&logoColor=06B6D4&labelColor=101827)
 ![LangGraph](https://img.shields.io/badge/LangGraph-StateGraph-0B1120?style=flat-square&logo=langchain&logoColor=7C3AED&labelColor=101827)
