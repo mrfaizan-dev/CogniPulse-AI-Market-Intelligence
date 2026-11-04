@@ -555,7 +555,7 @@ There are two ways to run CogniPulse: **local development** (recommended and des
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/cognipulse-agentic-intelligence-engine.git
+git clone https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence.git
 cd cognipulse-agentic-intelligence-engine
 ```
 
