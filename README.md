@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/cognipulse-hero.svg" alt="CogniPulse animated banner: a pulsing neural network of data nodes and the pipeline Search, Retrieve, Analyze, Structure, Intelligence" width="100%">
+<img src="./cognipulse-hero.svg" alt="CogniPulse animated banner: a pulsing neural network of data nodes and the pipeline Search, Retrieve, Analyze, Structure, Intelligence" width="100%">
 
 <h1>CogniPulse</h1>
 
@@ -452,9 +452,6 @@ A simplified view of the repository (UI components omitted):
 
 ```text
 cognipulse/
-├── assets/
-│   ├── cognipulse-hero.svg
-│   └── cognipulse-footer.svg
 ├── backend/
 │   ├── agent_graphs.py      # FastAPI app, Celery app and agent workflow
 │   ├── scraper_engine.py    # Layered browser retrieval and HTML cleaning
@@ -475,7 +472,7 @@ cognipulse/
 
 <div align="center">
 
-<img src="assets/cognipulse-footer.svg" alt="CogniPulse animated footer: Turning web data into market intelligence" width="100%">
+<img src="./cognipulse-footer.svg" alt="CogniPulse animated footer: Turning web data into market intelligence" width="100%">
 
 **Designed and built by [Your Name]**
 
