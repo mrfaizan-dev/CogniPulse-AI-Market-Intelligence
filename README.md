@@ -78,21 +78,32 @@ The primary request path flows top to bottom. Each box groups related technologi
 
 ```mermaid
 flowchart TB
-    U("Researcher<br/>natural-language query"):::client
-    FE("Next.js Dashboard<br/>TypeScript · Tailwind CSS"):::client
-    API("FastAPI REST API<br/>POST /api/v1/run-agent"):::api
-    CD("Celery Task Dispatch<br/>API returns HTTP 202 + task_id"):::queue
-    RB[("Redis<br/>Message Broker")]:::queue
-    CW("Celery Worker<br/>background execution"):::queue
-    LG("LangGraph StateGraph<br/>Searcher · Scraper · Finalizer"):::agent
-    TV("Searcher + Tavily<br/>advanced search · up to 5 URLs"):::retrieve
-    WR("Layered Web Retrieval<br/>SeleniumBase · Playwright · Nodriver"):::retrieve
-    CL("HTML Cleaning<br/>BeautifulSoup4 · html2text"):::retrieve
-    LLM("OpenRouter LLM<br/>OpenAI SDK · structured parsing"):::ai
-    PV("Pydantic Validation<br/>typed, validated items"):::ai
-    FN("Finalizer<br/>combines items and summaries"):::agent
-    REP("Markdown Intelligence Report"):::out
-    RR[("Redis<br/>Result Backend")]:::queue
+    subgraph Client ["Client Layer"]
+        U("Researcher<br/>natural-language query"):::client
+        FE("Next.js Dashboard<br/>TypeScript · Tailwind CSS"):::client
+    end
+
+    subgraph Gateway ["API & Queue"]
+        API("FastAPI REST API<br/>POST /api/v1/run-agent"):::api
+        CD("Celery Task Dispatch<br/>API returns HTTP 202 + task_id"):::queue
+        RB[("Redis<br/>Message Broker")]:::queue
+        CW("Celery Worker<br/>background execution"):::queue
+    end
+
+    subgraph Core ["LangGraph & Retrieval"]
+        LG("LangGraph StateGraph<br/>Searcher · Scraper · Finalizer"):::agent
+        TV("Searcher + Tavily<br/>advanced search · up to 5 URLs"):::retrieve
+        WR("Layered Web Retrieval<br/>SeleniumBase · Playwright · Nodriver"):::retrieve
+        CL("HTML Cleaning<br/>BeautifulSoup4 · html2text"):::retrieve
+    end
+
+    subgraph Processing ["AI Extraction & Output"]
+        LLM("OpenRouter LLM<br/>OpenAI SDK · structured parsing"):::ai
+        PV("Pydantic Validation<br/>typed, validated items"):::ai
+        FN("Finalizer<br/>combines items and summaries"):::agent
+        REP("Markdown Intelligence Report"):::out
+        RR[("Redis<br/>Result Backend")]:::queue
+    end
 
     U --> FE --> API --> CD --> RB --> CW --> LG
     LG --> TV --> WR --> CL --> LLM --> PV --> FN --> REP --> RR
@@ -105,7 +116,6 @@ flowchart TB
     classDef ai fill:#059669,stroke:#6EE7B7,stroke-width:2px,color:#F8FAFC;
     classDef out fill:#101827,stroke:#059669,stroke-width:2px,color:#F8FAFC;
     linkStyle default stroke:#0891B2,stroke-width:2px;
-```
 
 Once the worker finishes, the dashboard retrieves the result through a separate, much shorter path:
 
