@@ -319,8 +319,8 @@ Supply one or more keys per provider; multiple keys are what enable key rotation
 `docker-compose.yml` defines four services: **Redis**, **backend**, **Celery worker** and **frontend**.
 
 ```bash
-git clone <your-repo-url>
-cd cognipulse
+git clone https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence
+cd CogniPulse-AI-Market-Intelligence
 # create the root .env shown above, then:
 docker compose up --build
 ```
@@ -474,6 +474,6 @@ cognipulse/
 
 <img src="./cognipulse-footer.svg" alt="CogniPulse animated footer: Turning web data into market intelligence" width="100%">
 
-**Designed and built by [Your Name]**
+**Designed and built by [Mr Faizan]**
 
 </div>
