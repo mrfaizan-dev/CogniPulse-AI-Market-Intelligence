@@ -26,7 +26,7 @@ Ask a question in plain English and receive a validated, executive-ready Markdow
 
 # Executive Summary
 
-> **Executive Summary:** CogniPulse is an AI-powered market intelligence and autonomous web research platform[cite: 1]. It takes a simple English question, searches the live web automatically, extracts data using advanced web scraping, and presents it as a professional, executive-ready Markdown report[cite: 1]. This automates hours of manual research into just a few seconds[cite: 1].
+> **Executive Summary:** CogniPulse is an AI-powered market intelligence and autonomous web research platform. It takes a simple English question, searches the live web automatically, extracts data using advanced web scraping, and presents it as a professional, executive-ready Markdown report. This automates hours of manual research into just a few seconds.
 
 ---
 
