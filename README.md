@@ -76,37 +76,18 @@ The report lists titles, pricing or budget, availability and specifications for 
 
 The primary request path flows top to bottom. Each box groups related technologies so the diagram stays narrow and readable.
 
-```mermaid
 flowchart TB
-    subgraph Client ["Client Layer"]
-        U("Researcher<br/>natural-language query"):::client
-        FE("Next.js Dashboard<br/>TypeScript · Tailwind CSS"):::client
-    end
+    U("Researcher<br/>Natural-language query"):::client
+    FE("Next.js Dashboard<br/>TypeScript · Tailwind CSS"):::client
+    API("FastAPI REST API<br/>POST /api/v1/run-agent · HTTP 202 + task_id"):::api
+    CW("Celery + Redis<br/>Task Broker · Background Worker"):::queue
+    LG("LangGraph StateGraph<br/>Searcher · Scraper · Finalizer"):::agent
+    RET("Search & Web Retrieval<br/>Tavily · SeleniumBase · Playwright · Nodriver"):::retrieve
+    AI("Content Processing<br/>BeautifulSoup4 · html2text<br/>OpenRouter LLM · OpenAI SDK · Pydantic"):::ai
+    OUT("Finalized Results<br/>Markdown Intelligence Report"):::out
+    RR[("Redis<br/>Result Backend")]:::queue
 
-    subgraph Gateway ["API & Queue"]
-        API("FastAPI REST API<br/>POST /api/v1/run-agent"):::api
-        CD("Celery Task Dispatch<br/>API returns HTTP 202 + task_id"):::queue
-        RB[("Redis<br/>Message Broker")]:::queue
-        CW("Celery Worker<br/>background execution"):::queue
-    end
-
-    subgraph Core ["LangGraph & Retrieval"]
-        LG("LangGraph StateGraph<br/>Searcher · Scraper · Finalizer"):::agent
-        TV("Searcher + Tavily<br/>advanced search · up to 5 URLs"):::retrieve
-        WR("Layered Web Retrieval<br/>SeleniumBase · Playwright · Nodriver"):::retrieve
-        CL("HTML Cleaning<br/>BeautifulSoup4 · html2text"):::retrieve
-    end
-
-    subgraph Processing ["AI Extraction & Output"]
-        LLM("OpenRouter LLM<br/>OpenAI SDK · structured parsing"):::ai
-        PV("Pydantic Validation<br/>typed, validated items"):::ai
-        FN("Finalizer<br/>combines items and summaries"):::agent
-        REP("Markdown Intelligence Report"):::out
-        RR[("Redis<br/>Result Backend")]:::queue
-    end
-
-    U --> FE --> API --> CD --> RB --> CW --> LG
-    LG --> TV --> WR --> CL --> LLM --> PV --> FN --> REP --> RR
+    U --> FE --> API --> CW --> LG --> RET --> AI --> OUT --> RR
 
     classDef client fill:#101827,stroke:#0891B2,stroke-width:2px,color:#F8FAFC;
     classDef api fill:#2563EB,stroke:#93C5FD,stroke-width:2px,color:#F8FAFC;
@@ -116,25 +97,6 @@ flowchart TB
     classDef ai fill:#059669,stroke:#6EE7B7,stroke-width:2px,color:#F8FAFC;
     classDef out fill:#101827,stroke:#059669,stroke-width:2px,color:#F8FAFC;
     linkStyle default stroke:#0891B2,stroke-width:2px;
-
-Once the worker finishes, the dashboard retrieves the result through a separate, much shorter path:
-
-```mermaid
-flowchart TB
-    D("Next.js Dashboard<br/>polls roughly every 2.2 s"):::client
-    S("FastAPI<br/>GET /api/v1/task-status/{task_id}"):::api
-    R[("Redis<br/>Result Backend")]:::queue
-    J("JSON wrapper<br/>state · ready · successful · result"):::out
-    V("Report Dashboard<br/>render · copy · export"):::client
-
-    D --> S --> R --> J --> V
-
-    classDef client fill:#101827,stroke:#0891B2,stroke-width:2px,color:#F8FAFC;
-    classDef api fill:#2563EB,stroke:#93C5FD,stroke-width:2px,color:#F8FAFC;
-    classDef queue fill:#D97706,stroke:#FCD34D,stroke-width:2px,color:#0B1120;
-    classDef out fill:#101827,stroke:#059669,stroke-width:2px,color:#F8FAFC;
-    linkStyle default stroke:#0891B2,stroke-width:2px;
-```
 
 **Responsibilities stay separate:**
 
