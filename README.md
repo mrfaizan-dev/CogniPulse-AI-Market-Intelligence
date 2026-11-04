@@ -6,7 +6,7 @@
 
 <h3><em>From Natural-Language Research Queries to Structured Intelligence.</em></h3>
 
-<h4>An AI-powered market intelligence and autonomous web research platform.</h4><br>
+<h5>An AI-powered market intelligence and autonomous web research platform.</h5>
 Ask a question in plain English and receive a validated, executive-ready Markdown report built from live public web sources.
 
 ![Python](https://img.shields.io/badge/Python-3.12-0B1120?style=flat-square&logo=python&logoColor=06B6D4&labelColor=101827)
