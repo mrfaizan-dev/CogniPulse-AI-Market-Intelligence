@@ -454,6 +454,6 @@ cognipulse/
 
 <img src="./cognipulse-footer.svg" alt="CogniPulse animated footer: Turning web data into market intelligence" width="100%">
 
-**Designed and built by [Mr Faizan]**
+**Designed and built by Mr Faizan**
 
 </div>
