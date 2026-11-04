@@ -72,10 +72,12 @@ The report lists titles, pricing or budget, availability and specifications for 
 
 ---
 
-## Architecture
 
-The primary request path flows top to bottom. Each box groups related technologies so the diagram stays narrow and readable.
+## 🏗️ Architecture
 
+The system follows a streamlined, top-to-bottom architecture, combining related components while preserving the complete request-to-result workflow.
+
+```mermaid
 flowchart TB
     U("Researcher<br/>Natural-language query"):::client
     FE("Next.js Dashboard<br/>TypeScript · Tailwind CSS"):::client
@@ -97,6 +99,8 @@ flowchart TB
     classDef ai fill:#059669,stroke:#6EE7B7,stroke-width:2px,color:#F8FAFC;
     classDef out fill:#101827,stroke:#059669,stroke-width:2px,color:#F8FAFC;
     linkStyle default stroke:#0891B2,stroke-width:2px;
+```
+
 
 **Responsibilities stay separate:**
 
