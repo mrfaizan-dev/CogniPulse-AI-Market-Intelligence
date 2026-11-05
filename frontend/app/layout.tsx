@@ -9,7 +9,7 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   title: 'CogniPulse — Market Intelligence, Autonomous',
   description:
-    'Turn an RFP or job-post URL into proposal-ready intelligence with web extraction, portfolio-aware RAG, and a multi-agent review workflow.',
+    'An AI-powered market intelligence and autonomous web research platform.',
   applicationName: 'BidForge',
   themeColor: '#111713',
 };
