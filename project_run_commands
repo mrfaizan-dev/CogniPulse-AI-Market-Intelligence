@@ -1,3 +1,4 @@
+Option-1:
 
 cd backend
 python agent_graphs.py
@@ -8,3 +9,8 @@ celery -A agent_graphs.celery_app worker --loglevel=info -P solo  #for window on
 
 cd frontend
 npm run dev
+
+-----------
+Option-2:
+
+docker compose up --build
