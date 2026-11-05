@@ -6,18 +6,15 @@ services:
     container_name: redis_container
     restart: always
 
-    backend:
+  backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: fastapi_backend
-
     env_file:
       - .env
-
     ports:
       - "8800:8800"
-
     environment:
       - REDIS_URL=redis://redis:6379/0
     command: uvicorn agent_graphs:app --host 0.0.0.0 --port 8800
@@ -27,17 +24,14 @@ services:
       - redis
     restart: always
 
-    celery_worker:
+  celery_worker:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: celery_worker
-
     env_file:
       - .env
-
     command: celery -A agent_graphs.celery_app worker --loglevel=info -P solo
-
     environment:
       - REDIS_URL=redis://redis:6379/0
     volumes:
