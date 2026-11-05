@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: 'BidForge — RFP intelligence, engineered',
+  title: 'CogniPulse — Market Intelligence, Autonomous',
   description:
     'Turn an RFP or job-post URL into proposal-ready intelligence with web extraction, portfolio-aware RAG, and a multi-agent review workflow.',
   applicationName: 'BidForge',
