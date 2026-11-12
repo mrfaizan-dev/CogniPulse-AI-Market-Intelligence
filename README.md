@@ -70,39 +70,63 @@ git clone https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence.git
 cd CogniPulse-AI-Market-Intelligence
 ```
 
-### Step 2 — Create your local `.env` file
 
-The repository includes `.env.example` as a safe template. Create your own `.env` file from it.
+### Step 2 — Create Your Local `.env` File
 
-**Windows PowerShell:**
+The repository includes a `.env.example` file as a template. Copy it to create your own local `.env` configuration file.
+
+**🪟 Windows (PowerShell):**
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-**Linux / macOS:**
+**🐧 Linux / 🍎 macOS (Terminal):**
 
 ```bash
 cp .env.example .env
 ```
 
-### Step 3 — Add your API keys and model ID
+### Step 3 — Open `.env` and Configure Your Credentials
 
-Open the new `.env` file in a text editor. Replace the placeholder values with your own credentials:
+Open the newly created `.env` file using your preferred text editor.
+
+**🪟 Windows (PowerShell — Notepad):**
+
+```powershell
+notepad .env
+```
+
+**🐧 Linux / 🍎 macOS (Terminal — Nano):**
+
+```bash
+nano .env
+```
+
+Add your API keys and configure your preferred OpenRouter model ID:
 
 ```dotenv
-# Tavily web-search API key(s)
+# Tavily Web Search API Key(s)
 TAVILY_API_KEYS=YOUR_TAVILY_API_KEY
 
-# OpenRouter API key(s)
+# OpenRouter API Key(s)
 OPENROUTER_API_KEYS=YOUR_OPENROUTER_API_KEY
 
-# Use a valid OpenRouter model ID that supports structured output
+# OpenRouter Model ID (must support structured output)
 llm_model_name=YOUR_OPENROUTER_MODEL_ID
 
-# Local default; Docker Compose overrides this for containers
+# Redis Configuration
+# Docker Compose overrides this for containers
 REDIS_URL=redis://localhost:6379/0
 ```
+
+**Save your changes:**
+
+- **Windows / Notepad:** Press `Ctrl + S` and close Notepad.
+- **Linux / macOS / Nano:** Press `Ctrl + O`, then `Enter` to save, and `Ctrl + X` to exit.
+
+> 🔐 **Security:** Replace all placeholder values with your actual credentials. Never share your API keys or commit your `.env` file to GitHub. Keep `.env.example` free of real credentials.
+
 
 **Where to get the keys:**
 
