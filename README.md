@@ -109,7 +109,7 @@ Add your API keys and configure your preferred OpenRouter model ID:
 # Tavily Web Search API Key(s)
 TAVILY_API_KEYS=YOUR_TAVILY_API_KEY
 
-# OpenRouter API Key(s)
+# OpenRouter API Key(s) (Optional)
 OPENROUTER_API_KEYS=YOUR_OPENROUTER_API_KEY
 
 # OpenRouter Model ID (must support structured output)
