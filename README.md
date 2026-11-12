@@ -21,7 +21,7 @@ Turn a plain-English research question into a structured, executive-ready Markdo
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-0B1120?style=flat-square&logo=typescript&logoColor=2563EB&labelColor=101827)
 ![Docker](https://img.shields.io/badge/Docker-Compose-0B1120?style=flat-square&logo=docker&logoColor=06B6D4&labelColor=101827)
 
-[Overview](#overview) · [Quick Start](#-quick-start-docker) · [Features](#core-features) · [Architecture](#-architecture) · [Agent Workflow](#agent-workflow) · [Technical Details](#technical-implementation) · [Tech Stack](#technology-stack-and-engineering-skills) · [API](#api-reference) · [Local Development](#local-development-optional) · [Limitations](#limitations-and-roadmap)
+[Overview](#what-is-cognipulse) · [Quick Start](#-quick-start-docker) · [Features](#core-features) · [Architecture](#-architecture) · [Agent Workflow](#agent-workflow) · [Technical Details](#technical-implementation) · [Tech Stack](#technology-stack-and-engineering-skills) · [API](#api-reference) · [Local Development](#local-development-optional) · [Limitations](#limitations-and-roadmap)
 
 </div>
 
@@ -112,8 +112,8 @@ TAVILY_API_KEYS=YOUR_TAVILY_API_KEY
 # OpenRouter API Key(s)
 OPENROUTER_API_KEYS=YOUR_OPENROUTER_API_KEY
 
-#(Optional)
-# OpenRouter Model ID (must support structured output)
+# OpenRouter Model ID (Optional Override)
+# Must support structured output
 llm_model_name=YOUR_OPENROUTER_MODEL_ID
 
 # Redis Configuration
