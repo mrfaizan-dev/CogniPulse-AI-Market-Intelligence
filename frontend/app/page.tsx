@@ -71,7 +71,7 @@ type TaskStatusResponse = {
   result?: AgentResult | string | null;
 };
 
-const DEFAULT_API_BASE_URL = 'http://127.0.0.1:8800/';
+const DEFAULT_API_BASE_URL = 'http://127.0.0.1:8000/';
 const EXAMPLE_QUERIES = [
   'AI automation trends 2026',
   'Top project management software competitors',
