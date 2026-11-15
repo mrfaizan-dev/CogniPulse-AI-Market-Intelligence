@@ -2,6 +2,17 @@
 
 <img src="./cognipulse-hero.svg" alt="CogniPulse animated banner showing a neural network and the Search, Retrieve, Analyze, Structure, Intelligence pipeline" width="100%">
 
+<h1 align="center">🔥 WATCH IT IN ACTION: Live Working Product Demo</h1>
+<h3 align="center">🎬 Live Product Walkthrough & Architecture Demo</h3>
+
+<p align="center">
+  <b>⚡ Don't miss this! Click play below to watch the real, working project execute end-to-end in real time.</b>
+</p>
+
+<p align="center">
+  <video src="https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence/releases/download/v1.0.0/final.video.cogni.mp4" controls width="100%"></video>
+</p>
+
 # CogniPulse
 
 ### *From Natural-Language Research Queries to Structured Intelligence.*
