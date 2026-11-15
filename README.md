@@ -6,11 +6,13 @@
 <h3 align="center">🎬 Live Product Walkthrough & Architecture Demo</h3>
 
 <p align="center">
-  <b>⚡ Don't miss this! Click play below to watch the real, working project execute end-to-end in real time.</b>
+  <b>⚡ Click the banner below to watch the real, working project execute end-to-end in real time!</b>
 </p>
 
 <p align="center">
-  <video src="https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence/releases/download/v1.0.0/final.video.cogni.mp4" controls width="100%"></video>
+  <a href="https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence/releases/download/v1.0.0/final.video.cogni.mp4" target="_blank">
+    <img src="cognipulse-hero.svg" alt="Watch CogniPulse Demo Video" width="100%">
+  </a>
 </p>
 
 # CogniPulse
