@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mrfaizan-dev/CogniPulse-AI-Market-Intelligence/releases/download/v1.0.0/final.video.cogni.mp4" target="_blank">
-    <img src="cognipulse-hero.svg" alt="Watch CogniPulse Demo Video" width="100%">
+  <a href="https://www.youtube.com/watch?v=j9yXia-WD-A" target="_blank">
+    <img src="cognipulse-live-banner.svg" alt="Watch CogniPulse Live Demo Video" width="100%">
   </a>
 </p>
 
