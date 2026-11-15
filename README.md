@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=j9yXia-WD-A" target="_blank">
-    <img src="last.svg" alt="Watch CogniPulse Live Demo Video" width="100%">
+    <img src="./cognipulse-banner.svg" alt="Watch CogniPulse Live Demo Video" width="100%">
   </a>
 </p>
 
